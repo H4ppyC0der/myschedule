@@ -20,13 +20,13 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-    title: "My Schedule - Simplified Employee Scheduling for Efficient Workflows",
+    title: "MySchedule - Simplified Employee Scheduling for Efficient Workflows",
     // metadataBase: new URL(
     //     process.env.NEXT_PUBLIC_APP_BASE_URL || "https://myschedule.vercel.app/"
     // ),
     metadataBase: "https://myschedule.vercel.app/",
     description:
-        "My Schedule is a user-friendly employee scheduler designed to streamline workforce management. Create, organize, and share schedules effortlessly for improved team coordination and productivity.",
+        "MySchedule is a user-friendly employee scheduler designed to streamline workforce management. Create, organize, and share schedules effortlessly for improved team coordination and productivity.",
     creator: "Christian Macasinag Rodriguez",
     keywords: [
         "employee scheduler",
@@ -39,6 +39,8 @@ export const metadata = {
         "staff planner",
         "va schedule",
         "va scheduler",
+        "myscheduler",
+        "myschedule"
     ],
     openGraph: {
         type: "website",
