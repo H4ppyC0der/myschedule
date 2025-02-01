@@ -6,11 +6,44 @@ export const usersData = {
             lastName: "Rodriguez",
             lob: "bpo",
             client: "demant",
-            dayOff: ["Tuesday", "Wednesday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2025/1/26",
+                    dayOff: ["Monday", "Tuesday"],
+                    offTime: "03",
+                    Monday: "off",
+                    Tuesday: "off",
+                    Wednesday: {
+                        in: "03",
+                        break: "07",
+                        out: "11",
+                    },
+                    Thursday: {
+                        in: "03",
+                        break: "07",
+                        out: "11",
+                    },
+                    Friday: {
+                        in: "23",
+                        break: "03",
+                        out: "07",
+                    },
+                    Saturday: {
+                        in: "23",
+                        break: "03",
+                        out: "07",
+                    },
+                    Sunday: {
+                        in: "03",
+                        break: "07",
+                        out: "11",
+                    },
+                },
+                {
+                    startDate: "2025/1/27",
+                    endDate: "2026/11/30",
+                    dayOff: ["Tuesday", "Wednesday"],
                     offTime: "03",
                     Monday: {
                         in: "05",
@@ -48,11 +81,11 @@ export const usersData = {
             lastName: "Quezon",
             lob: "bpo",
             client: "demant",
-            dayOff: ["Wednesday", "Thursday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Wednesday", "Thursday"],
                     offTime: "07",
                     Monday: {
                         in: "07",
@@ -90,11 +123,11 @@ export const usersData = {
             lastName: "Sto. Domingo",
             lob: "bpo",
             client: "demant",
-            dayOff: ["Saturday", "Sunday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Saturday", "Sunday"],
                     offTime: "03",
                     Monday: {
                         in: "03",
@@ -132,11 +165,44 @@ export const usersData = {
             lastName: "Tanay",
             lob: "bpo",
             client: "demant",
-            dayOff: ["Thursday", "Friday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2025/1/26",
+                    dayOff: ["Thursday", "Friday"],
+                    offTime: "19",
+                    Monday: {
+                        in: "19",
+                        break: "23",
+                        out: "03",
+                    },
+                    Tuesday: {
+                        in: "19",
+                        break: "23",
+                        out: "03",
+                    },
+                    Wednesday: {
+                        in: "19",
+                        break: "23",
+                        out: "03",
+                    },
+                    Thursday: "off",
+                    Friday: "off",
+                    Saturday: {
+                        in: "19",
+                        break: "23",
+                        out: "03",
+                    },
+                    Sunday: {
+                        in: "19",
+                        break: "23",
+                        out: "03",
+                    },
+                },
+                {
+                    startDate: "2025/1/27",
+                    endDate: "2026/11/30",
+                    dayOff: ["Thursday", "Friday"],
                     offTime: "19",
                     Monday: {
                         in: "19",
@@ -174,11 +240,11 @@ export const usersData = {
             lastName: "Polo",
             lob: "bpo",
             client: "demant",
-            dayOff: ["Monday", "Tuesday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Monday", "Tuesday"],
                     offTime: "11",
                     Monday: "off",
                     Tuesday: "off",
@@ -216,11 +282,11 @@ export const usersData = {
             lastName: "Fibre",
             lob: "bpo",
             client: "demant",
-            dayOff: ["Saturday", "Sunday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Saturday", "Sunday"],
                     offTime: "15",
                     Monday: {
                         in: "15",
@@ -258,11 +324,11 @@ export const usersData = {
             lastName: "Lower",
             lob: "leads",
             client: "leads",
-            dayOff: ["Saturday", "Sunday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Saturday", "Sunday"],
                     offTime: "10",
                     Monday: {
                         in: "10",
@@ -300,11 +366,11 @@ export const usersData = {
             lastName: "Samarita",
             lob: "leads",
             client: "leads",
-            dayOff: ["Saturday", "Sunday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Saturday", "Sunday"],
                     offTime: "13",
                     Monday: {
                         in: "13",
@@ -343,11 +409,11 @@ export const usersData = {
             lastName: "Lafiguera",
             lob: "leads",
             client: "leads",
-            dayOff: ["Saturday", "Sunday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Saturday", "Sunday"],
                     offTime: "08",
                     Monday: {
                         in: "08",
@@ -385,11 +451,11 @@ export const usersData = {
             lastName: "Amarth",
             lob: "shared",
             client: "shared",
-            dayOff: ["Wednesday", "Thursday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Wednesday", "Thursday"],
                     offTime: "04",
                     Monday: {
                         in: "04",
@@ -427,11 +493,11 @@ export const usersData = {
             lastName: "Santos",
             lob: "shared",
             client: "shared",
-            dayOff: ["Monday", "Tuesday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Monday", "Tuesday"],
                     offTime: "04",
                     Monday: "off",
                     Tuesday: "off",
@@ -469,11 +535,11 @@ export const usersData = {
             lastName: " Malindi",
             lob: "shared",
             client: "shared",
-            dayOff: ["Saturday", "Sunday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Saturday", "Sunday"],
                     offTime: "02",
                     Monday: {
                         in: "02",
@@ -511,11 +577,11 @@ export const usersData = {
             lastName: " Gascon",
             lob: "shared",
             client: "shared",
-            dayOff: ["Saturday", "Sunday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Saturday", "Sunday"],
                     offTime: "10",
                     Monday: {
                         in: "10",
@@ -553,11 +619,11 @@ export const usersData = {
             lastName: "Abril",
             lob: "shared",
             client: "shared",
-            dayOff: ["Sunday", "Monday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Sunday", "Monday"],
                     offTime: "10",
                     Monday: "off",
                     Tuesday: {
@@ -595,11 +661,11 @@ export const usersData = {
             lastName: "Aquino",
             lob: "shared",
             client: "shared",
-            dayOff: ["Friday", "Saturday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Friday", "Saturday"],
                     offTime: "10",
                     Monday: {
                         in: "10",
@@ -637,11 +703,11 @@ export const usersData = {
             lastName: "Madupo",
             lob: "shared",
             client: "shared",
-            dayOff: ["Saturday", "Sunday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Saturday", "Sunday"],
                     offTime: "10",
                     Monday: {
                         in: "10",
@@ -679,11 +745,11 @@ export const usersData = {
             lastName: "Moonsami",
             lob: "shared",
             client: "shared",
-            dayOff: ["Tuesday", "Wednesday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Tuesday", "Wednesday"],
                     offTime: "10",
                     Monday: {
                         in: "10",
@@ -721,11 +787,11 @@ export const usersData = {
             lastName: "Skosana",
             lob: "shared",
             client: "shared",
-            dayOff: ["Thursday", "Friday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Thursday", "Friday"],
                     offTime: "10",
                     Monday: {
                         in: "10",
@@ -763,11 +829,11 @@ export const usersData = {
             lastName: "Carlos",
             lob: "shared",
             client: "shared",
-            dayOff: ["Sunday", "Monday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Sunday", "Monday"],
                     offTime: "16",
                     Monday: "off",
                     Tuesday: {
@@ -805,11 +871,11 @@ export const usersData = {
             lastName: "Gabriel",
             lob: "shared",
             client: "shared",
-            dayOff: ["Friday", "Saturday"],
             schedule: [
                 {
                     startDate: "2024/10/03",
-                    endDate: "2026/11/31",
+                    endDate: "2026/11/30",
+                    dayOff: ["Friday", "Saturday"],
                     offTime: "16",
                     Monday: {
                         in: "18",

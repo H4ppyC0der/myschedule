@@ -1,7 +1,8 @@
 import React from "react";
 import { DateTime, Settings, Duration } from "luxon";
+import { getCorrectSchedule } from "@/helpers/getCorrectSchedule";
 
-const Daily = ({ data, day, month, year, dayOff, currentTimezone }) => {
+const Daily = ({ data, day, month, year, currentTimezone }) => {
     const months = [
         "Jan",
         "Feb",
@@ -16,40 +17,53 @@ const Daily = ({ data, day, month, year, dayOff, currentTimezone }) => {
         "Nov",
         "Dec",
     ];
-    const startDate = Date.UTC(
-        data[0].startDate.split("/")[0],
-        data[0].startDate.split("/")[1],
-        data[0].startDate.split("/")[2]
-    );
-    const endDate = Date.UTC(
-        data[0].endDate.split("/")[0],
-        data[0].endDate.split("/")[1],
-        data[0].endDate.split("/")[2]
-    );
-    const utcNow = Date.UTC(year, month, day);
+
+    let schedule = getCorrectSchedule(data, day, month, year, currentTimezone);
+
     const breakDuration = 30;
     const duration = Duration.fromObject({ minutes: breakDuration });
+    // console.log(schedule);
 
-    const estTime = DateTime.fromObject(
-        {
-            hour: data[0].offTime,
-            day,
-            month,
-            year,
-        },
-        { zone: "America/New_York" }
-    );
-
-    return utcNow >= startDate && utcNow <= endDate ? (
-        dayOff.includes(estTime.toFormat("cccc")) ? (
+    return schedule ? (
+        schedule.dayOff.includes(
+            DateTime.fromObject(
+                {
+                    hour: schedule.offTime,
+                    day,
+                    month,
+                    year,
+                },
+                { zone: "America/New_York" }
+            ).toFormat("cccc")
+        ) ? (
             <ul className="text-center text-sm py-2">
                 <li className="bg-slate-100 text-slate-100">0</li>
                 <li className="border-b-[1px] font-semibold">
-                    {DateTime.fromISO(estTime)
+                    {DateTime.fromISO(
+                        DateTime.fromObject(
+                            {
+                                hour: schedule.offTime,
+                                day,
+                                month,
+                                year,
+                            },
+                            { zone: "America/New_York" }
+                        )
+                    )
                         .setZone(currentTimezone)
                         .toFormat("ccc") +
                         ", " +
-                        DateTime.fromISO(estTime)
+                        DateTime.fromISO(
+                            DateTime.fromObject(
+                                {
+                                    hour: schedule.offTime,
+                                    day,
+                                    month,
+                                    year,
+                                },
+                                { zone: "America/New_York" }
+                            )
+                        )
                             .setZone(currentTimezone)
                             .toFormat("DD")}
                 </li>
@@ -59,18 +73,48 @@ const Daily = ({ data, day, month, year, dayOff, currentTimezone }) => {
         ) : (
             <ul className="text-center text-sm py-2">
                 <li className="border-b-[1px] font-semibold">
-                    {DateTime.fromISO(estTime)
+                    {DateTime.fromISO(
+                        DateTime.fromObject(
+                            {
+                                hour: schedule.offTime,
+                                day,
+                                month,
+                                year,
+                            },
+                            { zone: "America/New_York" }
+                        )
+                    )
                         .setZone(currentTimezone)
                         .toFormat("ccc") +
                         ", " +
-                        DateTime.fromISO(estTime)
+                        DateTime.fromISO(
+                            DateTime.fromObject(
+                                {
+                                    hour: schedule.offTime,
+                                    day,
+                                    month,
+                                    year,
+                                },
+                                { zone: "America/New_York" }
+                            )
+                        )
                             .setZone(currentTimezone)
                             .toFormat("DD")}
                 </li>
                 <li className="bg-lime-200">
                     {DateTime.fromObject(
                         {
-                            hour: data[0][estTime.toFormat("cccc")]?.in,
+                            hour: schedule[
+                                DateTime.fromObject(
+                                    {
+                                        hour: schedule.offTime,
+                                        day,
+                                        month,
+                                        year,
+                                    },
+                                    { zone: "America/New_York" }
+                                ).toFormat("cccc")
+                            ]?.in,
                             day,
                             month,
                             year,
@@ -83,27 +127,101 @@ const Daily = ({ data, day, month, year, dayOff, currentTimezone }) => {
                         DateTime.fromObject(
                             {
                                 minute:
-                                    data[0][estTime.toFormat("cccc")].break +
+                                    schedule[
+                                        DateTime.fromObject(
+                                            {
+                                                hour: schedule.offTime,
+                                                day,
+                                                month,
+                                                year,
+                                            },
+                                            { zone: "America/New_York" }
+                                        ).toFormat("cccc")
+                                    ].break +
                                     ": " +
-                                    data[0][estTime.toFormat("cccc")].break
+                                    schedule[
+                                        DateTime.fromObject(
+                                            {
+                                                hour: schedule.offTime,
+                                                day,
+                                                month,
+                                                year,
+                                            },
+                                            { zone: "America/New_York" }
+                                        ).toFormat("cccc")
+                                    ].break
                                         .toString()
                                         .includes(":")
-                                        ? data[0][
-                                              estTime.toFormat("cccc")
+                                        ? schedule[
+                                              DateTime.fromObject(
+                                                  {
+                                                      hour: schedule.offTime,
+                                                      day,
+                                                      month,
+                                                      year,
+                                                  },
+                                                  { zone: "America/New_York" }
+                                              ).toFormat("cccc")
                                           ].break.split(":")[1]
-                                        : data[0][estTime.toFormat("cccc")]
-                                              .break,
+                                        : schedule[
+                                              DateTime.fromObject(
+                                                  {
+                                                      hour: schedule.offTime,
+                                                      day,
+                                                      month,
+                                                      year,
+                                                  },
+                                                  { zone: "America/New_York" }
+                                              ).toFormat("cccc")
+                                          ].break,
                                 hour:
-                                    data[0][estTime.toFormat("cccc")].break +
+                                    schedule[
+                                        DateTime.fromObject(
+                                            {
+                                                hour: schedule.offTime,
+                                                day,
+                                                month,
+                                                year,
+                                            },
+                                            { zone: "America/New_York" }
+                                        ).toFormat("cccc")
+                                    ].break +
                                     ": " +
-                                    data[0][estTime.toFormat("cccc")].break
+                                    schedule[
+                                        DateTime.fromObject(
+                                            {
+                                                hour: schedule.offTime,
+                                                day,
+                                                month,
+                                                year,
+                                            },
+                                            { zone: "America/New_York" }
+                                        ).toFormat("cccc")
+                                    ].break
                                         .toString()
                                         .includes(":")
-                                        ? data[0][
-                                              estTime.toFormat("cccc")
+                                        ? schedule[
+                                              DateTime.fromObject(
+                                                  {
+                                                      hour: schedule.offTime,
+                                                      day,
+                                                      month,
+                                                      year,
+                                                  },
+                                                  { zone: "America/New_York" }
+                                              ).toFormat("cccc")
                                           ].break.split(":")[0]
-                                        : data[0][estTime.toFormat("cccc")]
-                                              .break,
+                                        : schedule[
+                                              DateTime.fromObject(
+                                                  {
+                                                      hour: schedule.offTime,
+                                                      day,
+                                                      month,
+                                                      year,
+                                                  },
+                                                  { zone: "America/New_York" }
+                                              ).toFormat("cccc")
+                                          ].break,
                                 day,
 
                                 month,
@@ -120,19 +238,61 @@ const Daily = ({ data, day, month, year, dayOff, currentTimezone }) => {
                 <li className="bg-lime-200">
                     {DateTime.fromObject(
                         {
-                            hour: data[0][
-                                estTime.toFormat("cccc")
+                            hour: schedule[
+                                DateTime.fromObject(
+                                    {
+                                        hour: schedule.offTime,
+                                        day,
+                                        month,
+                                        year,
+                                    },
+                                    { zone: "America/New_York" }
+                                ).toFormat("cccc")
                             ].break.includes(":")
-                                ? data[0][estTime.toFormat("cccc")].break.split(
-                                      ":"
-                                  )[0]
-                                : data[0][estTime.toFormat("cccc")].break,
-                            minute: data[0][
-                                estTime.toFormat("cccc")
+                                ? schedule[
+                                      DateTime.fromObject(
+                                          {
+                                              hour: schedule.offTime,
+                                              day,
+                                              month,
+                                              year,
+                                          },
+                                          { zone: "America/New_York" }
+                                      ).toFormat("cccc")
+                                  ].break.split(":")[0]
+                                : schedule[
+                                      DateTime.fromObject(
+                                          {
+                                              hour: schedule.offTime,
+                                              day,
+                                              month,
+                                              year,
+                                          },
+                                          { zone: "America/New_York" }
+                                      ).toFormat("cccc")
+                                  ].break,
+                            minute: schedule[
+                                DateTime.fromObject(
+                                    {
+                                        hour: schedule.offTime,
+                                        day,
+                                        month,
+                                        year,
+                                    },
+                                    { zone: "America/New_York" }
+                                ).toFormat("cccc")
                             ].break.includes(":")
-                                ? data[0][estTime.toFormat("cccc")].break.split(
-                                      ":"
-                                  )[1]
+                                ? schedule[
+                                      DateTime.fromObject(
+                                          {
+                                              hour: schedule.offTime,
+                                              day,
+                                              month,
+                                              year,
+                                          },
+                                          { zone: "America/New_York" }
+                                      ).toFormat("cccc")
+                                  ].break.split(":")[1]
                                 : "00",
                             day,
                             month,
@@ -146,7 +306,17 @@ const Daily = ({ data, day, month, year, dayOff, currentTimezone }) => {
                         " - " +
                         DateTime.fromObject(
                             {
-                                hour: data[0][estTime.toFormat("cccc")].out,
+                                hour: schedule[
+                                    DateTime.fromObject(
+                                        {
+                                            hour: schedule.offTime,
+                                            day,
+                                            month,
+                                            year,
+                                        },
+                                        { zone: "America/New_York" }
+                                    ).toFormat("cccc")
+                                ].out,
                                 day,
                                 month,
                                 year,
@@ -164,7 +334,7 @@ const Daily = ({ data, day, month, year, dayOff, currentTimezone }) => {
             <li className="border-b-[1px] font-semibold">
                 {DateTime.fromObject(
                     {
-                        hour: data[0][estTime.toFormat("cccc")].in,
+                        hour: "00",
                         day,
                         month,
                         year,
