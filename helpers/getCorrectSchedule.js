@@ -37,18 +37,13 @@ export function getCorrectSchedule(
     );
     while (index < schedules.length) {
         if (currentTime >= startDate && currentTime <= endDate) {
-            console.log("day: " + day);
-            console.log("true: been here");
             break;
         } else {
             index++;
-            console.log(index);
             if (
                 (index >= schedules.length && currentTime > endDate) ||
                 (index >= schedules.length && currentTime < startDate)
             ) {
-                console.log("false: been here");
-                console.log(index);
                 return;
             } else {
                 startDate = DateTime.fromObject(

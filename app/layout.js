@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
 
 const poppins = Poppins({
     weight: "500",
@@ -40,7 +41,7 @@ export const metadata = {
         "va schedule",
         "va scheduler",
         "myscheduler",
-        "myschedule"
+        "myschedule",
     ],
     openGraph: {
         type: "website",
@@ -83,6 +84,7 @@ export default function RootLayout({ children }) {
             <body
                 className={`${poppins.variable} ${geistMono.variable} antialiased`}
             >
+                <Toaster />
                 {children}
             </body>
         </html>
