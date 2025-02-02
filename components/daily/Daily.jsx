@@ -22,7 +22,6 @@ const Daily = ({ data, day, month, year, currentTimezone }) => {
 
     const breakDuration = 30;
     const duration = Duration.fromObject({ minutes: breakDuration });
-    // console.log(schedule);
 
     return schedule ? (
         schedule.dayOff.includes(

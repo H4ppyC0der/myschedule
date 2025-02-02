@@ -9,10 +9,9 @@ const AgentSchedule = ({ data }) => {
     const endDate = new Date(year, month + 1, 0).getDate(); //getting the current month end day
     const end = new Date(year, month, endDate).getDay();
     const enddateprev = new Date(year, month, 0).getDate(); //getting the previous month end date
-    console.log(data.firstName);
 
     return (
-        <div className="h-full flex flex-col justify-start gap-4 divide-y-2 divide-slate-200  shadow-lg shadow-slate-300 p-2 border-b-2 ">
+        <div className="h-full flex flex-col justify-start gap-4 divide-y-[1px] divide-slate-200  shadow-lg shadow-slate-300 p-2 border-b-2 ">
             {Array.from(Array(endDate)).map((e, num) => (
                 <Daily
                     key={num}

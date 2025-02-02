@@ -1,23 +1,28 @@
 import React from "react";
 import Link from "next/link";
-import Timezone from "../timezone/Timezone";
+import Image from "next/image";
 
-const Nav = () => {
+const Nav = ({ buttonText, pageLink, organizationLogo }) => {
     return (
-        <nav className="px-4 py-2 flex justify-end">
-            <ul className="grid grid-cols-4 md:grid-cols-10 gap-3">
-                <li className=" col-span-2 md:col-span-8"></li>
-                <li className="col-span-1 text-right">
-                    <Link href={"/dashboard"}>
-                        <button className="hover:text-emerald-700 text-sm">
-                            Login
-                        </button>
+        <nav className="px-4 py-2 border-b-[1px] mb-4">
+            <ul className="grid grid-cols-3 gap-3">
+                <li className="text-2xl font-thin relative text-left ">
+                    <Link href="/">
+                        <Image
+                            layout={"fill"}
+                            objectFit={"contain"}
+                            src={organizationLogo}
+                            alt="Organization Logo"
+                        />
                     </Link>
                 </li>
-                <li className="col-span-1 text-left">
-                    <button className="hover:text-emerald-700 text-sm">
-                        Signup
-                    </button>
+                <li></li>
+                <li className="text-right">
+                    <Link href={pageLink}>
+                        <button className="hover:bg-slate-100 text-sm border-[1px] rounded-sm px-2 py-1">
+                            {buttonText}
+                        </button>
+                    </Link>
                 </li>
             </ul>
         </nav>

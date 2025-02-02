@@ -6,8 +6,12 @@ import Nav from "@/components/nav/Nav";
 export default function Home() {
     return (
         <>
-            <Nav />
-            <main className="overflow-hidden h-fit p-1 lg:p-2 ">
+            <Nav
+                buttonText="Dashboard"
+                pageLink="/login-signup"
+                organizationLogo="/help-squad-logo-black.png"
+            />
+            <main className="relative overflow-hidden h-fit p-1 lg:p-2 ">
                 <section className="p-2">
                     <Search />
                     <RadioFilter />
