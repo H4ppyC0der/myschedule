@@ -63,7 +63,7 @@ const Calendar = () => {
 
     return (
         <div className="mt-5">
-            <div className="flex justify-end">
+            <div className="flex justify-end mb-2">
                 <Timezone />
             </div>
             <div className="grid grid-cols-5 items-center h-12 border-b-[1px] border-t-[1px]">

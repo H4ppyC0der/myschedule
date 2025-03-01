@@ -20,7 +20,6 @@ const Daily = ({ data, day, month, year, currentTimezone }) => {
 
     let schedule = getCorrectSchedule(data, day, month, year, currentTimezone);
     const duration = Duration.fromObject({ minutes: schedule.breakDuration });
-    console.log(schedule);
     let isDSTFrozen = schedule
         ? DateTime.fromObject(
               {
