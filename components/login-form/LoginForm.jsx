@@ -1,7 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { useSession, signIn, signOut } from "next-auth/react";
 import {
     Card,
     CardContent,
@@ -13,6 +12,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { login } from "@/helpers/actions/auth";
 
 export function LoginForm() {
     return (
@@ -22,7 +22,7 @@ export function LoginForm() {
                 <TabsTrigger value="password">Signup</TabsTrigger>
             </TabsList>
             <TabsContent value="account">
-                <Card>
+                <Card className="border-none shadow-none">
                     <CardHeader>
                         <CardTitle>Welcome</CardTitle>
                         <CardDescription>
@@ -72,7 +72,7 @@ export function LoginForm() {
                                     <Button
                                         variant="outline"
                                         className="w-full"
-                                        onClick={() => signIn()}
+                                        onClick={() => login()}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ export function LoginForm() {
                 </Card>
             </TabsContent>
             <TabsContent value="password">
-                <Card>
+                <Card className="border-none shadow-none">
                     <CardHeader>
                         <CardTitle>Registration</CardTitle>
                         <CardDescription></CardDescription>

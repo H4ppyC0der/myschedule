@@ -41,7 +41,7 @@ const Search = () => {
                 />
                 {searchWord && (
                     <ul
-                        className={`${listDisplay} absolute bg-white left-0 border-l-2 divide-y-2 border-r-2 border-b-2 w-full z-50`}
+                        className={`${listDisplay} absolute bg-slate-100 left-0 top-9 border-[1px] divide-y-[1px] divide-slate-200 rounded-md  w-full z-50 h-fit max-h-50dvh overflow-y-auto`}
                     >
                         {usersData.schedule.filter(
                             (agent) =>
@@ -69,7 +69,7 @@ const Search = () => {
                                 .map((agent) => (
                                     <li
                                         key={agent.id}
-                                        className="hover:cursor-pointer hover:bg-slate-100 py-2 px-4 text-sm"
+                                        className="hover:cursor-pointer hover:bg-slate-200 py-2 px-4 text-sm"
                                         value={agent.id}
                                         onClick={(e) =>
                                             setFilteFn(e.target.value)

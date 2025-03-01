@@ -11,7 +11,7 @@ export default function Home() {
                 pageLink="/login-signup"
                 organizationLogo="/help-squad-logo-black.png"
             />
-            <main className="relative overflow-hidden h-fit p-1 lg:p-2 ">
+            <main className="relative overflow-hidden h-fit p-1 lg:p-2">
                 <section className="p-2">
                     <Search />
                     <RadioFilter />

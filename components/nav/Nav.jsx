@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Nav = ({ buttonText, pageLink, organizationLogo }) => {
     return (
-        <nav className="px-4 py-2 border-b-[1px] mb-4">
+        <nav className="px-4 py-2 mb-4 rounded-md">
             <ul className="grid grid-cols-3 gap-3">
                 <li className="text-2xl font-thin relative text-left ">
                     <Link href="/">
