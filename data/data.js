@@ -1003,27 +1003,27 @@ export const usersData = {
                     Monday: {
                         in: "15",
                         break: "19",
-                        out: "23",
+                        out: "24",
                     },
                     Tuesday: {
                         in: "15",
                         break: "19",
-                        out: "23",
+                        out: "24",
                     },
                     Wednesday: {
                         in: "15",
                         break: "19",
-                        out: "23",
+                        out: "24",
                     },
                     Thursday: {
                         in: "15",
                         break: "19",
-                        out: "23",
+                        out: "24",
                     },
                     Friday: {
                         in: "15",
                         break: "19",
-                        out: "23",
+                        out: "24",
                     },
                     Saturday: "off",
                     Sunday: "off",
