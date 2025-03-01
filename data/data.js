@@ -8,6 +8,7 @@ export const usersData = {
             client: "demant",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2025/1/26",
                     dayOff: ["Monday", "Tuesday"],
@@ -41,6 +42,7 @@ export const usersData = {
                     },
                 },
                 {
+                    isDSTFrozen: true,
                     startDate: "2025/1/27",
                     endDate: "2026/11/30",
                     dayOff: ["Tuesday", "Wednesday"],
@@ -83,6 +85,7 @@ export const usersData = {
             client: "demant",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Wednesday", "Thursday"],
@@ -125,6 +128,7 @@ export const usersData = {
             client: "demant",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Saturday", "Sunday"],
@@ -167,6 +171,7 @@ export const usersData = {
             client: "demant",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2025/1/26",
                     dayOff: ["Thursday", "Friday"],
@@ -200,6 +205,7 @@ export const usersData = {
                     },
                 },
                 {
+                    isDSTFrozen: true,
                     startDate: "2025/1/27",
                     endDate: "2026/11/30",
                     dayOff: ["Thursday", "Friday"],
@@ -242,6 +248,7 @@ export const usersData = {
             client: "demant",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Monday", "Tuesday"],
@@ -284,6 +291,7 @@ export const usersData = {
             client: "demant",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Saturday", "Sunday"],
@@ -326,6 +334,7 @@ export const usersData = {
             client: "leads",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Saturday", "Sunday"],
@@ -368,6 +377,7 @@ export const usersData = {
             client: "leads",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Saturday", "Sunday"],
@@ -411,6 +421,7 @@ export const usersData = {
             client: "leads",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Saturday", "Sunday"],
@@ -453,6 +464,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Wednesday", "Thursday"],
@@ -495,6 +507,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Monday", "Tuesday"],
@@ -537,6 +550,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Saturday", "Sunday"],
@@ -579,6 +593,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Saturday", "Sunday"],
@@ -621,6 +636,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Sunday", "Monday"],
@@ -663,6 +679,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Friday", "Saturday"],
@@ -705,6 +722,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Saturday", "Sunday"],
@@ -747,6 +765,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Tuesday", "Wednesday"],
@@ -789,6 +808,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Thursday", "Friday"],
@@ -831,6 +851,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Sunday", "Monday"],
@@ -873,6 +894,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
                     dayOff: ["Friday", "Saturday"],

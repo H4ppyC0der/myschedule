@@ -19,9 +19,22 @@ const Daily = ({ data, day, month, year, currentTimezone }) => {
     ];
 
     let schedule = getCorrectSchedule(data, day, month, year, currentTimezone);
-
     const breakDuration = 30;
     const duration = Duration.fromObject({ minutes: breakDuration });
+    let isDSTFrozen =
+        DateTime.fromObject(
+            {
+                hour: schedule.offTime,
+                day,
+                month,
+                year,
+            },
+            { zone: "America/New_York" }
+        ).isInDST && schedule.isDSTFrozen;
+    console.log(schedule);
+    let dstValue = isDSTFrozen
+        ? Duration.fromObject({ hours: 1 })
+        : Duration.fromObject({ hours: 0 });
 
     return schedule ? (
         schedule.dayOff.includes(
@@ -66,7 +79,9 @@ const Daily = ({ data, day, month, year, currentTimezone }) => {
                             .setZone(currentTimezone)
                             .toFormat("DD")}
                 </li>
-                <li className="bg-slate-900 text-slate-100 font-bold">OFF</li>
+                <li className="bg-slate-900 text-slate-100 font-bold rounded-sm">
+                    OFF
+                </li>
                 <li className="bg-slate-100 text-slate-100">0</li>
             </ul>
         ) : (
@@ -100,7 +115,7 @@ const Daily = ({ data, day, month, year, currentTimezone }) => {
                             .setZone(currentTimezone)
                             .toFormat("DD")}
                 </li>
-                <li className="bg-lime-200">
+                <li className="bg-lime-200 rounded-sm">
                     {DateTime.fromObject(
                         {
                             hour: schedule[
@@ -121,6 +136,7 @@ const Daily = ({ data, day, month, year, currentTimezone }) => {
                         { zone: "America/New_York" }
                     )
                         .setZone(currentTimezone)
+                        .plus(dstValue)
                         .toLocaleString(DateTime.TIME_SIMPLE) +
                         " - " +
                         DateTime.fromObject(
@@ -229,12 +245,13 @@ const Daily = ({ data, day, month, year, currentTimezone }) => {
                             { zone: "America/New_York" }
                         )
                             .setZone(currentTimezone)
+                            .plus(dstValue)
                             .toLocaleString(DateTime.TIME_SIMPLE)}
                 </li>
-                <li className="bg-green-500 text-slate-100 font-semibold">
+                <li className="bg-green-500 text-slate-100 rounded-sm font-semibold">
                     BREAK ({breakDuration} minutes)
                 </li>
-                <li className="bg-lime-200">
+                <li className="bg-lime-200 rounded-sm">
                     {DateTime.fromObject(
                         {
                             hour: schedule[
@@ -300,7 +317,7 @@ const Daily = ({ data, day, month, year, currentTimezone }) => {
                         { zone: "America/New_York" }
                     )
                         .setZone(currentTimezone)
-                        .plus(duration)
+                        .plus(duration + dstValue)
                         .toLocaleString(DateTime.TIME_SIMPLE) +
                         " - " +
                         DateTime.fromObject(
@@ -323,6 +340,7 @@ const Daily = ({ data, day, month, year, currentTimezone }) => {
                             { zone: "America/New_York" }
                         )
                             .setZone(currentTimezone)
+                            .plus(dstValue)
                             .toLocaleString(DateTime.TIME_SIMPLE)}
                 </li>
             </ul>
@@ -343,7 +361,7 @@ const Daily = ({ data, day, month, year, currentTimezone }) => {
                     .setZone(currentTimezone)
                     .toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)}
             </li>
-            <li className=" text-slate-400 italic">No data</li>
+            <li className=" text-slate-400 rounded-sm italic">No data</li>
             <li className="bg-slate-100 text-slate-100">0</li>
         </ul>
     );
