@@ -19,8 +19,8 @@ const Daily = ({ data, day, month, year, currentTimezone }) => {
     ];
 
     let schedule = getCorrectSchedule(data, day, month, year, currentTimezone);
-    const breakDuration = 30;
-    const duration = Duration.fromObject({ minutes: breakDuration });
+    const duration = Duration.fromObject({ minutes: schedule.breakDuration });
+    console.log(schedule);
     let isDSTFrozen = schedule
         ? DateTime.fromObject(
               {
@@ -249,7 +249,7 @@ const Daily = ({ data, day, month, year, currentTimezone }) => {
                             .toLocaleString(DateTime.TIME_SIMPLE)}
                 </li>
                 <li className="bg-green-500 text-slate-100 rounded-sm font-semibold">
-                    BREAK ({breakDuration} minutes)
+                    BREAK ({schedule.breakDuration} minutes)
                 </li>
                 <li className="bg-lime-200 rounded-sm">
                     {DateTime.fromObject(
