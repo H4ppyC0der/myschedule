@@ -8,6 +8,7 @@ export const usersData = {
             client: "demant",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2025/1/26",
@@ -42,15 +43,51 @@ export const usersData = {
                     },
                 },
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2025/1/27",
-                    endDate: "2026/11/30",
+                    endDate: "2025/2/23",
                     dayOff: ["Tuesday", "Wednesday"],
                     offTime: "03",
                     Monday: {
                         in: "05",
                         break: "09",
                         out: "13",
+                    },
+                    Tuesday: "off",
+                    Wednesday: "off",
+                    Thursday: {
+                        in: "03",
+                        break: "07",
+                        out: "11",
+                    },
+                    Friday: {
+                        in: "23",
+                        break: "03",
+                        out: "07",
+                    },
+                    Saturday: {
+                        in: "23",
+                        break: "03",
+                        out: "07",
+                    },
+                    Sunday: {
+                        in: "03",
+                        break: "07",
+                        out: "11",
+                    },
+                },
+                {
+                    breakDuration: 30,
+                    isDSTFrozen: true,
+                    startDate: "2025/2/24",
+                    endDate: "2026/11/30",
+                    dayOff: ["Tuesday", "Wednesday"],
+                    offTime: "03",
+                    Monday: {
+                        in: "03",
+                        break: "07",
+                        out: "11",
                     },
                     Tuesday: "off",
                     Wednesday: "off",
@@ -85,6 +122,7 @@ export const usersData = {
             client: "demant",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -128,6 +166,7 @@ export const usersData = {
             client: "demant",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -171,6 +210,7 @@ export const usersData = {
             client: "demant",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2025/1/26",
@@ -205,6 +245,7 @@ export const usersData = {
                     },
                 },
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2025/1/27",
                     endDate: "2026/11/30",
@@ -248,6 +289,7 @@ export const usersData = {
             client: "demant",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -291,6 +333,7 @@ export const usersData = {
             client: "demant",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -334,6 +377,7 @@ export const usersData = {
             client: "leads",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -377,6 +421,7 @@ export const usersData = {
             client: "leads",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -421,6 +466,7 @@ export const usersData = {
             client: "leads",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -464,6 +510,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -507,6 +554,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -550,6 +598,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -593,6 +642,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -636,6 +686,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -679,6 +730,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -722,6 +774,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -765,6 +818,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -808,6 +862,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -851,6 +906,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -894,6 +950,7 @@ export const usersData = {
             client: "shared",
             schedule: [
                 {
+                    breakDuration: 30,
                     isDSTFrozen: true,
                     startDate: "2024/10/03",
                     endDate: "2026/11/30",
@@ -929,6 +986,51 @@ export const usersData = {
                 },
             ],
         },
+        {
+            id: 21,
+            firstName: "Chris",
+            lastName: "Rodriguez",
+            lob: "bpo",
+            client: "orbiiit",
+            schedule: [
+                {
+                    breakDuration: 60,
+                    isDSTFrozen: true,
+                    startDate: "2025/2/10",
+                    endDate: "2027/2/10",
+                    dayOff: ["Saturday", "Sunday"],
+                    offTime: "15",
+                    Monday: {
+                        in: "15",
+                        break: "19",
+                        out: "23",
+                    },
+                    Tuesday: {
+                        in: "15",
+                        break: "19",
+                        out: "23",
+                    },
+                    Wednesday: {
+                        in: "15",
+                        break: "19",
+                        out: "23",
+                    },
+                    Thursday: {
+                        in: "15",
+                        break: "19",
+                        out: "23",
+                    },
+                    Friday: {
+                        in: "15",
+                        break: "19",
+                        out: "23",
+                    },
+                    Saturday: "off",
+                    Sunday: "off",
+                },
+            ],
+        },
     ],
+
     lob: ["demant", "shared"],
 };
