@@ -21,17 +21,17 @@ const Daily = ({ data, day, month, year, currentTimezone }) => {
     let schedule = getCorrectSchedule(data, day, month, year, currentTimezone);
     const breakDuration = 30;
     const duration = Duration.fromObject({ minutes: breakDuration });
-    let isDSTFrozen =
-        DateTime.fromObject(
-            {
-                hour: schedule.offTime,
-                day,
-                month,
-                year,
-            },
-            { zone: "America/New_York" }
-        ).isInDST && schedule.isDSTFrozen;
-    console.log(schedule);
+    let isDSTFrozen = schedule
+        ? DateTime.fromObject(
+              {
+                  hour: schedule.offTime,
+                  day,
+                  month,
+                  year,
+              },
+              { zone: "America/New_York" }
+          ).isInDST && schedule.isDSTFrozen
+        : false;
     let dstValue = isDSTFrozen
         ? Duration.fromObject({ hours: 1 })
         : Duration.fromObject({ hours: 0 });
